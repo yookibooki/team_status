@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Status</title>
+    <meta name="description" content="A lightweight roster of the team." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-repo="https://github.com/yookibooki/team_status">
+    <div class="bg-orb bg-orb--one" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb--two" aria-hidden="true"></div>
+
+    <header class="hero">
+      <div class="hero__content">
+        <h1>Team Status</h1>
+        <div class="hero__meta" id="data-note">Data from team.json</div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel" aria-labelledby="roster-heading">
+        <div class="panel__header">
+          <div>
+            <h2 id="roster-heading">Roster</h2>
+            <p class="subtle">Sorted by name, filterable by name or GitHub handle.</p>
+          </div>
+          <label class="search" for="search">
+            <span class="search__label">Search</span>
+            <input id="search" type="search" placeholder="e.g. Alex or octocat" autocomplete="off" />
+          </label>
+        </div>
+        <div id="roster" class="grid" aria-live="polite"></div>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+:root {
+  --ink: #f3f1ea;
+  --muted: #b3b0a7;
+  --paper: #0b0f12;
+  --accent: #ffb347;
+  --accent-dark: #e6903c;
+  --card: #151a1f;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(28, 42, 51, 0.95) 0%, #0b0f12 42%, #0a1214 100%),
+    linear-gradient(140deg, rgba(18, 28, 35, 0.7), rgba(11, 15, 18, 0.6));
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(0px);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-orb--one {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 179, 71, 0.45) 0%, rgba(255, 179, 71, 0) 70%);
+  top: -120px;
+  right: -80px;
+}
+
+.bg-orb--two {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(77, 129, 126, 0.45) 0%, rgba(77, 129, 126, 0) 68%);
+  bottom: -160px;
+  left: -120px;
+}
+
+.hero {
+  padding: 52px 24px 32px;
+  position: relative;
+  z-index: 1;
+  min-height: 26vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--accent-dark);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 0 18px;
+}
+
+.hero__meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.content {
+  padding: 0 24px 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.panel {
+  background: rgba(12, 15, 18, 0.78);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px var(--shadow);
+  padding: 28px;
+  margin: 0 auto 28px;
+  max-width: 980px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.subtle {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+.search {
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.search__label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+input[type="search"] {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 10px 16px;
+  min-width: 240px;
+  font-size: 0.98rem;
+  background: #0f1419;
+  color: var(--ink);
+}
+
+input[type="search"]:focus {
+  outline: 2px solid rgba(255, 179, 71, 0.5);
+  outline-offset: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  animation: fadeUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.card a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card__meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.82rem;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 179, 71, 0.18);
+  color: var(--accent);
+}
+
+.links {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.join {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.join h3 {
+  margin-top: 0;
+}
+
+.join ol {
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 12px 48px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 20px;
+  }
+
+  input[type="search"] {
+    width: 100%;
+    min-width: unset;
+  }
+}

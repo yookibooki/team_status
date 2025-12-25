@@ -1,0 +1,11 @@
+[
+  {
+    "name": "John",
+    "github": "yookibooki",
+    "role": "Backend Developer",
+    "timezone": "UTC+5",
+    "links": [
+      { "label": "Stackoverflow", "url": "https://stackoverflow.com/users/15235277/john" }
+    ]
+  }
+]
