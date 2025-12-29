@@ -1,0 +1,44 @@
+name: Add me to team
+description: Request to be added to the team roster.
+title: "Add me to team: <your name>"
+labels:
+  - add-me
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Your full name as you want it displayed.
+      placeholder: "Ada Lovelace"
+    validations:
+      required: true
+  - type: input
+    id: github
+    attributes:
+      label: GitHub username
+      description: Your GitHub handle (no @).
+      placeholder: "octocat"
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Role (optional)
+      placeholder: "Maintainer"
+    validations:
+      required: false
+  - type: input
+    id: timezone
+    attributes:
+      label: Timezone (optional)
+      placeholder: "UTC+1"
+    validations:
+      required: false
+  - type: textarea
+    id: links
+    attributes:
+      label: Links (optional)
+      description: "One per line as Label - URL. Example: Website - https://example.com"
+      placeholder: "Website - https://example.com"
+    validations:
+      required: false
